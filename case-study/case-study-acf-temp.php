@@ -242,9 +242,12 @@ class CaseStudyTMP1 {
 	public function get_section_5( $atts ) {
 		$this->run_data_once();
 
-		$atts = shortcode_atts( [
-			'param' => '', // heading | body | cards
-		], $atts );
+		$atts = shortcode_atts(
+			[
+				'param' => '', // heading | body | cards
+			],
+			$atts
+		);
 
 		$data = self::$acf_data;
 
@@ -268,19 +271,33 @@ class CaseStudyTMP1 {
 			ob_start(); ?>
 			<div class="cs-sec5-cards">
 				<?php foreach ( $cards as $card ) :
-					$title   = $card['card_heading_text']   ?? '';
-					$tag     = $card['card_heading_tag']    ?? 'h3';
-					$content = $card['card_body_content']   ?? '';
+					$title      = $card['card_heading_text']   ?? '';
+					$tag        = $card['card_heading_tag']    ?? 'h3';
+					$content    = $card['card_body_content']   ?? '';
+
+					// NEW: corner image
+					$corner_img = $card['card_corner_image']   ?? [];
+					$corner_url = $corner_img['url']           ?? '';
+					$corner_alt = $corner_img['alt']           ?? '';
 					?>
 					<article class="cs-sec5-card">
 						<?php
 						if ( $title ) {
 							echo $this->render_heading( $title, $tag, 'cs-sec5-card-title' );
 						}
+
 						if ( $content ) {
 							echo '<div class="cs-sec5-card-body">' . wp_kses_post( $content ) . '</div>';
 						}
-						?>
+
+						if ( $corner_url ) : ?>
+							<div class="cs-sec5-card-corner">
+								<img
+									src="<?php echo esc_url( $corner_url ); ?>"
+									alt="<?php echo esc_attr( $corner_alt ?: $title ); ?>"
+								>
+							</div>
+						<?php endif; ?>
 					</article>
 				<?php endforeach; ?>
 			</div>
