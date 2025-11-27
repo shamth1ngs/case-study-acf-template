@@ -1,362 +1,398 @@
 /* ------------------------------------------------------------------
- * Layout / container
- * ------------------------------------------------------------------ */
+* Layout / container
+* ------------------------------------------------------------------ */
 #case-study-template-container {
-  overflow: hidden;
+	overflow: hidden;
 }
 
 .elementor-element.elementor-element-4db3b66.e-con-full.e-flex.e-con.e-child {
-  width: 1440px;
+	width: 1440px;
 }
 
 /* ------------------------------------------------------------------
- * Background images
- * ------------------------------------------------------------------ */
+* Background images
+* ------------------------------------------------------------------ */
 
 /* Shared base for sections with overlapping backgrounds */
 .elementor-element-fbf8ec6,
 .elementor-element-390ddf6,
 .elementor-element-592dd6f {
-  position: relative;
-  overflow: visible;
+	position: relative;
+	overflow: visible;
 }
 
 /* Ensure content sits above pseudo elements */
 .elementor-element-fbf8ec6 .e-con-inner {
-  position: relative;
-  z-index: 2;
+	position: relative;
+	z-index: 2;
 }
 
 /* Section 1 background images */
 .elementor-element-fbf8ec6::after {
-  content: "";
-  position: absolute;
-  left: 78%;
-  transform: translateX(-50%);
-  bottom: -238px;
-  width: 161rem;
-  height: 70rem;
-  background-image:
-    url("https://aemorph.com/wp-content/uploads/Container-1.png"),
-    url("https://aemorph.com/wp-content/uploads/grid.png");
-  background-repeat: no-repeat, no-repeat;
-  background-position: center, center;
-  background-size: 40%, 100%;
-  z-index: 1;
-  pointer-events: none;
+	content: "";
+	position: absolute;
+	left: 78%;
+	transform: translateX(-50%);
+	bottom: -238px;
+	width: 161rem;
+	height: 70rem;
+	background-image:
+		url("https://aemorph.com/wp-content/uploads/Container-1.png"),
+		url("https://aemorph.com/wp-content/uploads/grid.png");
+	background-repeat: no-repeat, no-repeat;
+	background-position: center, center;
+	background-size: 40%, 100%;
+	z-index: 1;
+	pointer-events: none;
 }
 
 /* Section 2 background image */
 .elementor-element-390ddf6::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: -300px;
-  width: 180rem;
-  height: 90rem;
-  background-image: url("https://aemorph.com/wp-content/uploads/Rectangle-129-1.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 66%;
-  z-index: 1;
-  pointer-events: none;
+	content: "";
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: -300px;
+	width: 180rem;
+	height: 90rem;
+	background-image: url("https://aemorph.com/wp-content/uploads/Rectangle-129-1.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 66%;
+	z-index: 1;
+	pointer-events: none;
 }
 
 /* Section 3 background image */
 .elementor-element-592dd6f::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: -134rem;
-  width: 100%;
-  height: 166rem;
-  background-image: url("https://aemorph.com/wp-content/uploads/Rectangle-129-1.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100%;
-  z-index: 1;
-  pointer-events: none;
+	content: "";
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: -134rem;
+	width: 100%;
+	height: 166rem;
+	background-image: url("https://aemorph.com/wp-content/uploads/Rectangle-129-1.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100%;
+	z-index: 1;
+	pointer-events: none;
 }
 
 /* ------------------------------------------------------------------
- * Banner layout
- * ------------------------------------------------------------------ */
+* Banner layout
+* ------------------------------------------------------------------ */
 .elementor-shortcode:has(.cs-banner-right-img) {
-  display: flex;
-  justify-content: center;
+	display: flex;
+	justify-content: center;
 }
 
 /* ------------------------------------------------------------------
- * Typography
- * ------------------------------------------------------------------ */
+* Typography
+* ------------------------------------------------------------------ */
 #case-study-template h1,
 #case-study-template h2,
 #case-study-template h3,
 #case-study-template p {
-  font-family: "Inter", sans-serif;
+	font-family: "Inter", sans-serif;
 }
 
 /* H1 */
 #case-study-template h1 {
-  font-size: 54px;
-  font-weight: 900;
-  line-height: 110%;
+	font-size: 54px;
+	font-weight: 900;
+	line-height: 110%;
 }
 
 /* H2 */
 #case-study-template h2 {
-  font-size: 24px;
-  font-weight: bold;
-  line-height: 120%;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: #a3a4ae;
+	font-size: 24px;
+	font-weight: bold;
+	line-height: 120%;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	color: #a3a4ae;
 }
 
 /* H2 default alignment (except specific overrides) */
 #case-study-template h2:not(.cs-sec4-heading) {
-  text-align: center;
+	text-align: center;
 }
 
 /* H3 */
 #case-study-template h3 {
-  font-size: 20px;
-  font-weight: bold;
-  line-height: 110%;
-  color: #ffffff;
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 110%;
+	color: #ffffff;
 }
 
 /* H3 special heading in section 3 */
 #case-study-template h3.cs-sec3-heading {
-  font-size: 30px;
-  font-weight: normal;
-  line-height: 35px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  text-align: center;
+	font-size: 30px;
+	font-weight: normal;
+	line-height: 35px;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	text-align: center;
 }
 
 /* Paragraphs */
 #case-study-template p {
-  font-size: 20px;
-  font-weight: 300;
-  line-height: 140%;
-  color: #ffffff;
-  margin: 0 0 1.5rem;
+	font-size: 20px;
+	font-weight: 300;
+	line-height: 140%;
+	color: #ffffff;
+	margin: 0 0 1.5rem;
 }
 
 /* ------------------------------------------------------------------
- * Section-specific styles
- * ------------------------------------------------------------------ */
+* Section-specific styles
+* ------------------------------------------------------------------ */
 
 /* Gradient heading */
 #see-heading-1 h1 {
-  background: linear-gradient(
-    66.5deg,
-    #ab1ff4 0%,
-    #2866f5 47%,
-    #5cefef 100%
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+	background: linear-gradient(
+		66.5deg,
+		#ab1ff4 0%,
+		#2866f5 47%,
+		#5cefef 100%
+	);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
 }
 
 /* Rounded white pill (Elementor section) */
 .elementor-19221 .elementor-element.elementor-element-c8fe731 {
-  background-color: #ffffff;
-  border-radius: 999px;
+	background-color: #ffffff;
+	border-radius: 999px;
 }
 
 /* Case study button gradient text */
 #see-cs-btn {
-  background: -webkit-linear-gradient(
-    66.5deg,
-    #144dd2 15.15%,
-    #8110bc 84.85%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+	background: -webkit-linear-gradient(
+		66.5deg,
+		#144dd2 15.15%,
+		#8110bc 84.85%
+	);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
 /* Case study button icon */
 #see-cs-btn svg {
-  fill: #8110bc;
+	fill: #8110bc;
 }
 
 /* Section 4 heading width */
-#cs-see-section4
-  .elementor-element.elementor-element-64ccc15.elementor-widget.elementor-widget-heading
-  > .elementor-widget-container {
-  width: 532px;
+#cs-see-section4 .elementor-element.elementor-element-64ccc15.elementor-widget.elementor-widget-heading > .elementor-widget-container {
+	width: 532px;
 }
 
 /* Global padding for each Elementor section inside template */
-#case-study-template-container
-  .elementor.elementor-19221.post-19336.page.type-page.status-publish.hentry
-  > div {
-  padding-block: 4rem;
+#case-study-template-container .elementor.elementor-19221.post-19336.page.type-page.status-publish.hentry > div {
+	padding-block: 4rem;
 }
 
 /* ------------------------------------------------------------------
- * Section 5 – Cards
- * ------------------------------------------------------------------ */
+* Section 5 – Cards
+* ------------------------------------------------------------------ */
 
 /* Card grid */
 .cs-sec5-cards {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 24px;
-  margin-top: 40px;
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 2rem;
+	margin-top: 40px;
+	position: relative;
+	overflow: hidden;
 }
 
 /* Card component */
 article.cs-sec5-card {
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 20px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  padding: 4rem 3.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+	background: rgba(255, 255, 255, 0.2);
+	border-radius: 20px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(20px);
+	-webkit-backdrop-filter: blur(20px);
+	padding: 4rem 3.5rem;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
 }
 
 /* Card title */
 .cs-sec5-card-title {
-  font-size: 18px;
-  line-height: 1.4;
-  font-weight: 600;
-  margin: 0 0 12px;
-  color: #ffffff;
+	font-size: 18px;
+	line-height: 1.4;
+	font-weight: 600;
+	margin: 0 0 12px;
+	color: #ffffff;
 }
 
 /* Card body text */
 .cs-sec5-card-body {
-  font-size: 14px;
-  line-height: 1.7;
-  color: #d3d8ff;
+	font-size: 14px;
+	line-height: 1.7;
+	color: #d3d8ff;
 }
 
 .cs-sec5-card-body p {
-  margin: 0 0 1.5rem;
+	margin: 0 0 1.5rem;
 }
 
 .cs-sec5-card-body p:last-child {
-  margin-bottom: 0;
+	margin-bottom: 0;
 }
 
 /* ------------------------------------------------------------------
- * Section 6 – Result carousel
- * ------------------------------------------------------------------ */
+* Section 6 – Result carousel
+* ------------------------------------------------------------------ */
 .cs-sec6-swiper {
-  width: 100%;
-  padding-bottom: 32px; /* space above the text */
-  cursor: grab;
+	width: 100%;
+	padding-bottom: 32px; /* space above the text */
+	cursor: grab;
 }
 
 /* Each slide = screenshot card */
 .cs-sec6-slide {
-  width: clamp(220px, 18vw, 320px);
-  background: transparent;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
+	width: clamp(220px, 18vw, 320px);
+	background: transparent;
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
 }
 
 /* Screenshot image */
 .cs-sec6-slide img {
-  display: block;
-  width: 100%;
-  height: 235px !important;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+	display: block;
+	width: 100%;
+	height: 235px !important;
+	border-radius: 16px;
+	overflow: hidden;
+	box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
 }
 
 /* Caption under each slide */
 .cs-sec6-slide-caption {
-  margin-top: 8px;
-  font-size: 13px;
-  line-height: 1.4;
-  color: #cfd8ff;
-  text-align: left;
+	margin-top: 8px;
+	font-size: 13px;
+	line-height: 1.4;
+	color: #cfd8ff;
+	text-align: left;
 }
 
 /* ------------------------------------------------------------------
- * Responsive
- * ------------------------------------------------------------------ */
+* Responsive
+* ------------------------------------------------------------------ */
 
 /* Tablet and below – section 3 heading container width */
 @media screen and (max-width: 768px) {
-  .elementor-heading-title.elementor-size-default:has(h3.cs-sec3-heading) {
-    width: 700px;
-  }
+	.elementor-heading-title.elementor-size-default:has(h3.cs-sec3-heading) {
+		width: 700px;
+	}
 
-  /* Section 5 – cards: 1 column on mobile */
-  .cs-sec5-cards {
-    grid-template-columns: 1fr !important;
-  }
+	/* Section 5 – cards: 1 column on mobile */
+	.cs-sec5-cards {
+		grid-template-columns: 1fr !important;
+	}
 }
 
 /* 2 columns on medium screens (tablet landscape) */
 @media (max-width: 1024px) {
-  .cs-sec5-cards {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
+	.cs-sec5-cards {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+@media (max-width: 1200px) {
+	#case-study-template-container .elementor.elementor-19221.post-19336.page.type-page.status-publish.hentry > div:not(:last-child) {
+		padding-inline: 20px;
+	}
 }
 
 /* Mobile-specific tweaks */
-@media screen and (max-width: 468px) and (min-width: 320px) {
-  .elementor-heading-title.elementor-size-default:has(h3.cs-sec3-heading),
-  #cs-see-section4
-    .elementor-element.elementor-element-64ccc15.elementor-widget.elementor-widget-heading
-    > .elementor-widget-container {
-    width: auto !important;
-  }
+@media screen and (max-width: 480px) and (min-width: 320px) {
+	.elementor-heading-title.elementor-size-default:has(h3.cs-sec3-heading),
+	#cs-see-section4 .elementor-element.elementor-element-64ccc15.elementor-widget.elementor-widget-heading > .elementor-widget-container {
+		width: auto !important;
+	}
 
-  #case-study-template-container
-    .elementor.elementor-19221.post-19336.page.type-page.status-publish.hentry
-    > div:not(:last-child) {
-    padding-block: 2rem;
-    padding-inline: 20px;
-  }
+	#case-study-template-container .elementor.elementor-19221.post-19336.page.type-page.status-publish.hentry > div:not(:last-child) {
+		padding-block: 2rem;
+	}
 
-  #case-study-template h1 {
-    font-size: 30px;
-    text-align: center;
-    width: 320px;
-  }
+	#case-study-template h1 {
+		font-size: 30px;
+		text-align: center;
+		width: 320px;
+	}
 
-  .elementor-shortcode:has(.cs-banner-right-img) img {
-    width: 260px;
-  }
+	.elementor-shortcode:has(.cs-banner-right-img) img {
+		width: 260px;
+	}
 
-  #case-study-template p {
-    font-size: 16px !important;
-  }
+	#case-study-template p {
+		font-size: 16px !important;
+	}
 
-  #case-study-template h3.cs-sec3-heading {
-    font-size: 24px;
-  }
+	#case-study-template h3.cs-sec3-heading {
+		font-size: 24px;
+	}
 
-  #case-study-template h2 {
-    font-size: 20px;
-  }
+	#case-study-template h2 {
+		font-size: 20px;
+	}
 
-  .elementor-shortcode:has(.cs-sec4-right-img) {
-    display: flex;
-    justify-content: center;
-  }
+	#case-study-template h2 {
+		text-align: center;
+	}
 
-  .elementor-shortcode:has(.cs-sec4-right-img) img {
-    width: 360px;
-  }
+	.elementor-shortcode:has(.cs-sec4-right-img) {
+		display: flex;
+		justify-content: center;
+	}
 
-  article.cs-sec5-card {
-    padding: 2.5rem 2rem !important;
-  }
+	.elementor-shortcode:has(.cs-sec4-right-img) img {
+		width: 360px;
+	}
+
+	article.cs-sec5-card {
+		padding: 2.5rem 2rem !important;
+	}
 }
+
+/* Bottom-right illustration */
+.cs-sec5-card-corner {
+	position: absolute;
+	right: -9px;
+	bottom: -12px;
+	opacity: 1;
+	pointer-events: none;
+}
+
+.cs-sec5-card-corner img {
+	display: block;
+	max-width: 96px;
+	height: auto;
+}
+
+/* Base state: hidden & slightly down */
+.cs-animate-up {
+    opacity: 0;
+    transform: translateY(5rem);
+    transition:
+        opacity 0.6s ease-out,
+        transform 0.6s ease-out;
+    transition-delay: var(--cs-delay, 0s);
+    will-change: opacity, transform;
+}
+
+/* When visible: fade/slide into place */
+.cs-animate-up.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
